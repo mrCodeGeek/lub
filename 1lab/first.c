@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int roman (int i,int j,char c)
 {
@@ -16,7 +15,7 @@ int main(int argc, char const *argv[])
 {
     int num;
 	
-	printf("Enter Number, more that 0, but less 100000\n");
+	printf("Enter Number: ");
 	scanf("%d", &num);
 
 	num=roman(num,1000,'M');
@@ -26,9 +25,6 @@ int main(int argc, char const *argv[])
 	num=roman(num,10,'X');
 	num=roman(num,5,'V');
 	num=roman(num,1,'I');
-
-	getchar();
-	printf("\n\n");
 	
 	return 0;
 }
