@@ -5,10 +5,23 @@ int main(int argc, char const *argv[])
 {	
 	float a[3];
 	float square, height, median, bisector, hp;
+	bool check = true;
 
-	printf("Введите три стороны треугольника через пробел: ");
-	scanf("%f %f %f", &a[0], &a[1], &a[2]);
+	while(check)
+	{
+		printf("Введите три стороны треугольника через пробел: ");
+		scanf("%f %f %f", &a[0], &a[1], &a[2]);
 
+		if(a[0]+a[1]>a[2] && a[0]+a[2]>a[1] && a[2]+a[1]>a[0])
+		{
+			check = false;
+		}
+		else
+		{
+			printf("Ошибка\n");
+		}
+	}
+		
 	hp = (a[0]+a[1]+a[2])/2;
 	square = sqrtf(hp*(hp-a[0])*(hp-a[1])*(hp-a[2]));
 	printf("Площадь треугольника= %.5f\n\n", square);
@@ -37,6 +50,7 @@ int main(int argc, char const *argv[])
 		printf("Медиана к стороне а%d = %.5f\n", i+1, median);
 		printf("Бисектриса к стороне а%d = %.5f\n\n", i+1, bisector);
 	}
+
 
 	return 0;
 }
