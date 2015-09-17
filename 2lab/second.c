@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(int argc, char const *argv[])
+int main()
 {	
-	float a[3];
+	float a[3]; 
 	float square, height, median, bisector, hp;
 	bool check = true;
 

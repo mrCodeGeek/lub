@@ -11,11 +11,11 @@ int roman (int i,int j,char c)
 }
 
 
-int main(int argc, char const *argv[])
+int main()
 {
     int num;
 	
-	printf("Enter Number: ");
+	printf("Enter number: ");
 	scanf("%d", &num);
 
 	num=roman(num,1000,'M');
